@@ -1,0 +1,30 @@
+.board {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    gap: 5px;
+    width: 300px;
+    margin: 0 auto;
+    border: 2px solid #ccc;
+}
+
+.cell {
+    width: 70px;
+    height: 70px;
+    background-color: #eee;
+    border: 1px solid #ddd;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-img {
+    width: 50px;
+    height: 50px;
+}
+
+.scores {
+    width: fit-content;
+    font-size: 10px;
+    margin: 0 auto;
+}
