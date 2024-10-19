@@ -1,30 +1,102 @@
-.board {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(4, 1fr);
-    gap: 5px;
-    width: 300px;
-    margin: 0 auto;
-    border: 2px solid #ccc;
-}
-
-.cell {
-    width: 70px;
-    height: 70px;
-    background-color: #eee;
-    border: 1px solid #ddd;
+.container {
     display: flex;
-    justify-content: center;
-    align-items: center;
+    max-width: 1000px;
 }
 
-.hero-img {
-    width: 50px;
-    height: 50px;
+.tasks-column {
+    width: 30%;
+    border: 2px solid #ccc;
+    background-color: lightgrey;
+    padding: 0 5px;
 }
 
-.scores {
-    width: fit-content;
-    font-size: 10px;
-    margin: 0 auto;
+.column-header {
+    display: flex;
+    justify-content: space-between;
+    padding: 5px 0;
+}
+
+.header {
+    margin: 0;
+}
+
+.edit-header {
+    width: 10px;
+    cursor: pointer;
+}
+
+.task-item {
+    position: relative;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    background-color: #fff;
+
+    font-size: 20px;
+}
+
+.task-item.dragged {
+    position: absolute;
+    z-index: 999;
+    pointer-events: none;
+
+    /* border-radius: 10px;
+    background: #fff; */
+}
+
+.delete-mark {
+    position: absolute;
+    top: 1px;
+    right: 5px;
+}
+
+.add-task {
+    margin-top: 20px;
+    color: rgb(107, 107, 107);
+    cursor: pointer;
+}
+
+.add-task:hover {
+    text-decoration: underline;
+}
+
+.edit-input {
+    padding: 5px;
+    border: 1px solid transparent;
+    border-radius: 3px;
+    font-size: 1em;
+}
+
+.ok-button {
+    background-color: #fff;
+    border: 1px solid transparent;
+    border-radius: 3px;
+}
+
+.add-input {
+    padding: 5px;
+    margin-bottom: 5px;
+    border: 1px solid transparent;
+    border-radius: 3px;
+    font-size: 0.9em;
+    width: 234px;
+}
+
+.add-button {
+    padding: 5px;
+    background-color: rgb(41, 202, 41);
+    border: 1px solid transparent;
+    border-radius: 3px;
+    font-size: 1em;
+    color: #fff;
+}
+
+.cancel-button {
+    margin-left: 10px;
+    padding: 5px;
+    border: 1px solid transparent;
+    border-radius: 3px;
+    background-color: lightgrey;
+    color: rgb(107, 107, 107);
+    font-size: 1em;
 }

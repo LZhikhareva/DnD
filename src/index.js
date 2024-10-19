@@ -1,7 +1,6 @@
 import "./css/style.css";
-import { Game } from './js/game'
+import { Board } from './js/board'
 
-// TODO: write your code in app.js
+// // TODO: write your code in app.js
 
-const game = new Game();
-game.init();
+const board = new Board(document.querySelector('.container'));
